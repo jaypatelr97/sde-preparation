@@ -1,0 +1,79 @@
+1. how to implement caching in spring boot?
+--> https://www.javatpoint.com/spring-boot-caching
+2. What is ConcurrentHashMap?
+3. @EnableCaching ?
+4. @Configuration ?
+5. @CacheConfig ?
+--> https://www.javatpoint.com/spring-boot-caching
+6. @Caching?
+7. @CachePut or @CacheEvict ?
+8. @Cacheable ? 
+9. @RequestMapping ?
+10. Caching in spring boot?
+11. how do microservices communicate with each other?
+12. RestTemplate ?
+13. What is messaging/event driven communication ins spring boot ?
+14. What is auto-configuration in spring boot?
+15. What is the use of devtools library in spring boot?
+16. what are different exceptions in java?
+17. What is System.out.println ? How is out parameter initialized ?
+18. What are different ways of creating an Object? --> new keyword, using Class.forName(). .newInstance() method, obj1.clone(), builder pattern, desrilization etc..
+19. What is the use case of private constructors? --> private constructors are used to have singleton classes. only one object to be created within the class. , utility classes dont need to create object they just have to call the static methods.
+20. What are immutable classes?
+21. how can we get immutable class?
+22. What is singleton design pattern ?
+23. What are different design patterns ?
+24. Spring bean scopes ?
+25. Spring bean life cycle ?
+26. What are marker interface in java ?
+27. what are functional interface in java ?
+28. What are Runnable, Comparable and ActionLister interfaces in java ?
+29. Different ways to create thread ?
+30. What is yield method in thread ?
+31. Inter thread communication in java ?
+32. java 8 allows default and static methods ? Why ?
+33. Default method in java 8 interface and if class is implementing multiple interfaces have same method parameter, then how will you call the method of one particular interface?
+34. Spring security JWT ?
+35. Different annotations used in spring JWT implementation ?
+36. Spring bean scopes ? Singleton, Prototype, Request, Session, Global-Session ?
+37. @EnableWebSecurity ?
+38. ConcurrentHahMap and how it works ?
+39. Difference between string vs stringbuilder vs stringbuffer ?
+40. spring bean life cycle ?
+41. Why string is immutable ?
+42. How can we create immutable class ?
+43. Different design patterns in java ?  --> Refer durgeesh video on youtube
+44. Refection API ?
+45. Resource resource = new Resource();
+	try {
+    // Use the resource
+	} finally {
+	    resource.close();
+	}
+46. the use of finalize has been deprecated since Java 9. why? 
+47. what is the correct syntax for lambda ?
+48. what all are jpa implementations ?
+49. mow in spring boot ?
+50. 2 phase commit ?
+51. REST, SOAP, POISX which one is not a protocol ?
+52. difference between string vs stringbuffer vs string builder vs stringjoiner ?
+53. yield method in java
+54. join method
+55. joinlock ????
+56. forkjoin ?
+57. deamon threads ?
+58. what is race conditions ?
+59. super() cannot be the first startement in the constructor. Why  ?
+60. Spring acutators ?
+61. In azure applicationInsights and azure monitor are the equivalent to spring actuator .
+61. different modules of spring ?
+62. Excpetion progogation ?
+63. default scope of bean in spring framework?
+64. Implemetation classes of ApplicationContext ?
+65. What are the modules of spring core container ?
+66. What are modules of web layer?
+
+
+
+
+

@@ -1,0 +1,98 @@
+When to use @Bean?
+beans are like objects in java. with spring boot beans are autoconfigured using @SpringBootApplication and @EnableAutoConfiguration.
+
+With help of @Beans. Spring boot will not autoconfigure the beans. 
+This is useful at times when we have to initialize the bean based on some particular condition. ex: cachemanager implementation (create bean only after some operations are performed)
+authorization implementation --> create authorization bean when performed some conditions etc
+
+few other annotations used along with @Bean are -
+@Scope
+@Lazy
+@DependsOn
+@Primary
+
+Spring is organized in a modular fashion. The developer can pick and choose the modules as per the need for building an enterprise application. Spring Framework 5.x has the following key module groups:
+
+Spring Core Container: This module provides the Spring IoC container and Dependency Injection features.
+Spring Data Access/Integration: This module provide support to access database in Spring applications.
+Spring Web: This modules provide support to create web applications.
+Spring AOP: This module supports aspect oriented programming implementation.
+Spring Messaging: This module provides support for integrating Spring applications with messaging systems.
+Spring Test: This module supports testing of Spring applications using JUnit or TestNG.
+
+When to use @Configuration?
+
+
+What is applicationContext in spring?
+
+
+--------------------------------------------------------
+
+oops priciples - 
+abstraction - hiding the unnecassry details and showing only the relevant details to the subclass is called abstraction. 
+abstraction can be achieved using abstract class or by using interface 
+
+consider a example where i have one interface A which is implemented by 2 classes B and C.
+now, i have one Test class which is the controller class.
+I have autowired interface bean. how will spring decide which bean class to autowire?
+
+there are few approaches - 
+1. Usually, when we have multiple interface implementations and try to autowire that interface into the component, we’ll get an error – “required a single bean, but X were found”. The reason is simple: Spring doesn’t know which implementation we want to see in that component. Fortunately, Spring provides multiple tools to be more specific.
+
+2. @Qualifier -  you specify the bean name that you wnat to configure.
+you can provide your custome bean name over the implementation class also ans then specify that custom name in the Test class where you are autowiring hat object/interface.
+
+if you don not specify the qualifier name then it will create a bean with the camel casing of the class name. ex -  “myAwesomeClass” is a valid qualifier if the class name was “MyAwesomeClass“.
+
+3. @Primary -  we can annotate one of the implementations with @Primary. Spring will use this implementation if there are multiple candidates and autowiring by parameter name or a qualifier is not applicable:
+
+encapsulation
+
+inheritance
+
+polymorphism 
+
+
+
+
+----------------------------------------
+spring annoations
+@Value 
+@Component 
+@Conditional
+
+--------------------------
+@Supresswarning 
+
+--------------------------------------------------------------------------------
+spring actuator - 
+
+provides some feature endpoints that help us to monitor spring boot application
+metrics, beans, info, health, environment properties 
+
+/health and /metrics can be very important for debugging and identifying performacnce holdup.
+/env for checking environment variables 
+/auditevents for tracking user activities.
+
+/shutdown will elegantly shutdown the application
+
+Different types of endpoints available in spring actuators :
+health  - gives statis of the application is up or down
+Info
+beans
+caches
+env
+metrics  - displays CPU usage, memoery usage, garbage collection staistics, thread pool usage and custom you may define 
+audit event
+
+
+important endpoinsts in actuators -
+/actuator - lists all the urls for getting more details
+/health - shows status up or running
+/info - gives more details like application name, version etc
+/caches - 
+/mapping - gives mapping about particulatr endpoint
+/metrics - gives cpu usage, memory usage, garbage coll;ection etc etc
+
+
+
