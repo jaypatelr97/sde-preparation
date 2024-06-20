@@ -1,0 +1,179 @@
+Difference between String and StringBuffer ?
+- String object are immutable 
+- StringBuffer are mutable 
+
+What is immutability and mutability ?
+- immutable means non-changable
+- mutable means changable
+
+
+Once we create string object we cant change its content. thus String object is immutable 
+Once we create StringBuffer object we can change its content. thus StringBuffer is mutable
+
+case 1-
+String s = new String("durga");
+s.concat("software");        (note here the method is concat)
+SOP(s);
+// output ==> durga
+
+(output is durga and not durgasooftware bcoz s.concat() is not assigned top a new variable and printed.
+how it will look in the memory 
+_____________
+|            |
+|   durga    | <----- s (s poiting to durga object in the memory)
+|_____________
+________________
+| durgasoftware |  <---------- (there is no variable that is pointing to the memory object)
+|               |               (of durgasoftware. so it is available for garbage coll )
+______________                  (and the op of the SOP statement will be durga)
+
+
+)
+
+case 2 - 
+StringBuffer sb = new StringBuffer("durga");
+sb.append("software");     (note that here the method is append)
+SOP(sb);
+// output --> durgasoftware
+
+how it will look in the memory 
+_____________
+|            |
+|   durga    | <----- sb (sb pointing to durga object in the memory)
+|_____________
+
+_____________
+|                   |
+|   durgasoftware   | <----- sb (sb pointing to durga object in the memory)
+|_____________
+
+sb is first pointing to the memory having value durga and then it will append the value in the same memory and update the value to durgasoftware
+
+------------------------------------------------------------------------------------------
+
+== vs equals()
+
+case 1:
+String s1 = new String("durga");
+String s2 = new String("durga");
+// here both the string objects are created with new keyword. so both will have new / different memory in the object.
+SOP(s1==s2);  // == operator checks reference so both the objects are at different memoery location hence output is false
+SOP(s1.equals(s2)); // String class overrides the equals method to compare the content. so here the output will be true.
+
+
+case 2:
+StringBuffer sb1 = new StringBuffer("durga");
+StringBuffer sb2 = new StringBuffer("durga");
+
+SOP(sb1 == sb2); // false (2 different StringBuffer objects created)
+SOP(sb1.equals(sb2)); // false (StringBuffer does not override the Object class equals methods so it does reference/address comparison)
+
+--------------------------------------------------------
+
+Heap and String Pools concept -
+
+String s = new String("durga");
+-->
+the object for the above statement is created in 2 areas - Heap area and String constant Pool area.
+
+the object that is created in the SCP is not pointing to any reference. but it is not available for garbage collection also bcoz it is managed by JVM. More expalantion below -
+
+(till 1.6 version SCP was saved in Method Area/ Permgen)
+after 1.7 version SCP is moved to heap area only. i.e a small space is given in heap area for SCP.
+
+String s = "durga";
+in this the object will be created in the SCP area only.
+it will first check if the object with the same content is already present. if yes then it will point to the same object or else it will create a new object.
+
+Example - 
+String s1 = new String("durga");
+String s2 = new String("durga");
+String s3 = "durga";
+String s4 = "durga";
+
+Heap                                          
+___________
+|          |
+|          | <---- s1
+| durga    |
+| _______  |
+___________
+|          |
+| durga    | <----- s2
+|          |
+------------
+
+SCP 
+__________
+|         |
+|durga    | <------- s3
+|         | <------- s4
+__________
+
+Note - if any string object created at the runtime. it will be created in the heap area.
+for every literal one object will be created in the string constant pool
+
+Ex -
+String s = new String("durga");
+s.concat("software");
+s = s.concat("solutions");
+
+for every literal a new object will be created in the SCP area.
+
+Heap                                                                  SCP
+
+[durga] <-- X-- s                                                    [durga] 
+[durgasoftware] <-- (no reference)                                  [software]
+[durgasolutions] <-- s (s will start pointing to this object)       [solutions]    
+
+EX -
+String s1 = new String("spring");
+s1.concat("fall");
+String s2 = s1.concat("winter");
+s2.concat("summer");
+SOP(s1); // spring
+SOP(S2); // springwinter
+
+Heap                                                                          SCP
+[spring] <---- s1                                                          [spring]
+[springfall] <---- (no reference varaible)                                 [fall]
+[springwinter] <---- s2                                                    [winter]
+[springwintersummer] <----- no reference variable                          [summer]
+
+
+EX:
+main(){
+String s1 = new String("You cannot change me");
+String s2 = new String("You cannot change me");
+SOP(s1==s2);  // false (bothe the objects are in different memory area so false)
+
+String s3 = "You cannot change me";
+SOP(s2==s3);  // false (one is in heap area and the other in SCP)
+
+String s4 = "You cannot change me";
+SOP(s3==s4); // true 
+
+String s5 = "You cannot " + "change me";   
+SOP(s4==s5); // true (at compile time only both the literals are cancatinated and formed to one literal. so t runtime it is one string literal only )
+
+String s6 = "You cannot ";
+String s7 = s6 + "change me"; // here + is done on varaible and literal so it will be performed at runtime and not compile time. when executed at runtime it will be created in heap memory
+SOP(s4==s7); // false
+
+final String s8 = "You cannot ";
+String s9 = s8 + "change me"; // every final variable will be replaced by value at the compile time only. so constant + constant will be performed at compile time only
+SOP(s4==s9); // true
+}
+
+heap                                                                            SCP
+[You cannot change me] <--- s1              [You cannot change me] <--- s3, s4, s5, s7, s9
+[You cannot change me] <--- s2                                     
+                                               [you cannot]  <-- s6, s8
+                                               [change me]
+                         
+                 [1:19:35]                      
+-------------------------
+
+
+
+

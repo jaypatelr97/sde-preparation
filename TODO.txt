@@ -3,3 +3,16 @@ azrure cloud lex course
 spring microservice lex course 
 mongodb / Cassandra
 aws / azure 
+
+
+
+----------------------
+java 
+java 8 to 17
+spring 
+spring boot 
+database 
+design pattern 
+microservices
+cloud 
+DSA

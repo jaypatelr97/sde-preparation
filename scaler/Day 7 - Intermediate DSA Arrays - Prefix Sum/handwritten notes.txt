@@ -1,0 +1,14 @@
+Reference question 
+given q queries. find the sum of all the elements between [s,e] ?
+
+TC = NQ
+
+using prefix sum technique time complexity optimized to O(N) and space complexity is O(N)
+
+
+* given array find the sum of all odd idx elements and even idx elements 
+
+* special index problem. sum of odd elements and even elements after removing 1 element.
+
+
+
