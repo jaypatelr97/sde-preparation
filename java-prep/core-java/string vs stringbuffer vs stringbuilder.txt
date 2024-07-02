@@ -173,6 +173,117 @@ heap                                                                            
                          
                  [1:19:35]                      
 -------------------------
+advantage with SCP - 
+In SCP same object area can be reused for multiple references. so no need to create new objects multiple times. example - Voter registration form (most of the parametesrs are string) so Hyderabad as state no need to save multiple times it will be saved only once in the SCP area. 
+
+Disadvantages of SCP -
+see if immutablity concept was not provided by java, then 1 crore refer variable are pointing to Hyderabad object. so if you change any one object value then all the reference value will get updated. so java people came up with concept of immutability. with immutable objects the objects cannot be modified. a new object will be created and poited to taht.
+
+-------------------------------------
+FAQ's 
+1. why SCP is avaibale only for String object but not for StringBuffer ?
+--> String is most commonly used data type in java. so java people provided special feture to string object only. StringBuffer is not very much used so no special behaviour
+2. Why String objects are immutable whereas StringBuffer objects are mutable?
+reusing the same object with the help of SCP so String object is immutable
+3. Addition to String objects any other objects are immutable in java ?
+yes, all wrapper class objects
+
+-----------------------------------------
+important constructors of string class 
+
+
+important method of string class 
+1. public char charAt(int index)
+2. equals
+3. replace
+4. substring(int idx)
+5. substring(int start, int end)
+6. indexOf()
+7. lastIndexOf()
+8. toLowerCase()
+9. toUpperCase()
+10. trim()
+
+note - 
+ if because of our operation there is change in our content then only a new object will be created. if there is no change in the content then it will not create a new object
+
+
+main(){
+String s1 = new String("durga");
+String s2 = s1.toUpperCase();
+String s3 = s1.toLowerCase();
+SOP(s1==s2); // false
+SOP(s1==s3); // true
+
+}
+
+
+-------------------------------------------------
+creation of our own immutable class
+
+immutable means that the object should not be modified after its creations.
+
+if the content is same use same object
+if content modified create different object
+make class as final so the method cannot be overriddedn
+
+code 
+public final class Test{
+private int i;
+
+public Test(){
+this.i = i;
+}
+
+public void modify(int i){
+if(this.i==i){
+return this;
+} else {
+return new Test(i);
+}
+
+}
+
+--------------------------------------------------------------
+
+final vs immutable 
+Scanaerio - If i mark StringBuffer object as final will it becoming immutable? ans is NO.
+Explanation - 
+if a reference variable is marked as final, then we cannot reassign the variable with new value but it does not garuntee that the content of the same object will not get modified.
+
+Code Proof :
+public class Test{
+main(){
+final StringBuffer sb = new StringBuffer("durga");
+sb.append("software");
+
+SOP(sb); // here ans will be durgasoftware
+
+sb = new StringBuffer("durgasoft") // compile time error because reassigning to final variable not allowed
+}
+
+}
+
+conclusion = by making reference vaiable as final we cannot achieve immutability
+
+we cannot make StringBuffer immutable
+
+------------------------------------------
+need of StringBuffer
+
+If content keep on changing then dont use String because String is immutable and it will create new object everytime.
+you StringBuffer in such places were content keep on changing
+
+String does not have capacity 
+StringBuffer has capacity concept
+
+default capacity of the StringBuffer is 16. once it is full it will create new StringBuffer object with bigger capacity (current capacity + 1) * 2
+
+------------------------------------------------
+need of StringBuilder and differences with StringBuffer? 
+
+every method in StringBuffer is synchronized
+
 
 
 

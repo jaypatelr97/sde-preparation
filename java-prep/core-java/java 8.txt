@@ -1,0 +1,10 @@
+functional interface 
+lambda expression 
+method references
+lis of predefined functional interface
+splitterator
+concurrenthashmap changes in java 8 
+map()
+flatMap()
+reduce()
+default methods in java 8

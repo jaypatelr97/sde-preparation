@@ -1,0 +1,192 @@
+ Excellent communication skills with the ability to communicate with all levels of management.
+ Ability to build rapport and relationships.
+ A record of successful delivery of software applications as an individual
+ Problem solver and solution-seeking approach
+ Knowledgeable – possessing the technical knowledge, market knowledge, and other specialized knowledge of the team’s problem domain.
+ Hands on experience in building complex and highly scalable and performing systems.
+ Solid understanding and hands-on experience in Java, J2EE, Spring, Spring Security, Spring Boot, RESTful web services
+ Solid understanding and experience integrating web services.
+ Exposure to building cloud ready applications (microservices)
+ Exposure to Test Driven Development, Continuous Delivery, and Integration
+ Must be high-energy, detail-oriented, proactive and can function under pressure in an independent environment.
+ Must provide the necessary skills to have a high degree of initiative and self-motivation to drive results.
+ Possesses strong communication skills -- both verbal and written – and strong relationship, collaborative skills, and organizational skills.
+ Willingness and ability to learn and take on challenging opportunities and to work as a member of matrix based diverse and geographically distributed project team.
+ Bachelor’s in computer degree (BE/BTech)
+ 7-10 years of work experience
+
+
+
+
+Essential Skills
+
+Java 8, Spring, REST APIs, Junit
+Basic knowledge of Oracle/SQL/ PL SQL, Linux, Shell Script, JMS, MQ
+Jira, Confluence, Git, Maven, Teamcity/Jenkins, Artifactory
+Experience working in an Agile/DevOps environment
+Strong analytical and debugging skills
+Proficient communication skills (written/verbal)
+
+
+Desired Skills
+
+Kafka, Public cloud (aws/google/azure), Docker, Kubernetes, Openshift
+TDD, BDD
+Experience in Investment Banking/Financial domain
+
+
+
+citi bank
+Should be hands-on with technology stack of Java/J2EE, microservices, database, Python (advantage).
+Work closely with the tech developers, do peer code PR reviews and deliver projects with quality and timeline intact.
+This role is in the BFSI domain of Risk Technology, specifically focusing on Stress Testing data analytics area.
+Manage multiple teams of professionals to accomplish established goals and conduct 
+Conduct tasks related to feasibility studies, time and cost estimates, IT planning, risk technology, applications development, model development, and establish and implement new or revised applications systems and programs to meet specific business needs or user areas
+Monitor and control all phases of development process and analysis, design, construction, testing, and implementation as well as provide user and operational support on applications to business users
+Utilize in-depth specialty knowledge of applications development to analyze complex problems/issues, provide evaluation of business process, system process, and industry standards, and make evaluative judgement
+Recommend and develop security measures in post implementation analysis of business usage to ensure successful system design and functionality
+Consult with users/clients and other technology groups on issues, recommend advanced programming solutions, and install and assist customer exposure systems
+Ensure essential procedures are followed and help define operating standards and processes
+Serve as advisor or coach to new or lower level analysts
+Has the ability to operate with a limited level of direct supervision. 
+Can exercise independence of judgement and autonomy. 
+Acts as SME to senior stakeholders and /or other team members.
+Appropriately assess risk when business decisions are made, demonstrating particular consideration for the firm's reputation and safeguarding Citigroup, its clients and assets, by driving compliance with applicable laws, rules and regulations, adhering to Policy, applying sound ethical judgment regarding personal behavior, conduct and business practices, and escalating, managing and reporting control issues with transparency.
+
+
+
+
+
+
+
+persistent system 
+What you’ll do
+
+
+
+Lead cross-functional technical teams in the design, development and delivery of quality software applications
+Write complex, clean and maintainable code to develop scalable user-friendly Front-end applications, services and API
+Design and architect frontend or full-stack solutions
+Develop reusable UI components that can serve the needs of multiple applications
+Drive proof of concepts to validate solution options
+Ensure the maintainability and quality of code
+Hands-on management of a team/teams of developers
+ 
+What you’ll do
+
+
+
+Minimum 8 – 12 years of experience in Core Java and spring boot
+Ability to understand the domain to become a subject matter expert
+Proven track record in solution design
+Good experience working with large data sets with hands-on technology skills to design and build robust data processing engine using industry standard frameworks
+Hands-on configuration management, monitoring, performance tuning of database operations
+Open and quick to learn new technologies and tools
+Knowledge of Data science & cloud platforms would be a bonus
+Excellent problem solving, hands-on engineering skills and communication skills
+Engineering degree in Computer Science, Information Technology or related field
+
+
+Tietoevry
+
+u may apply to Tietoevry by selecting Apply and fill your application details to the form. You may also Apply by using LinkedIn and populate details to your application from your LinkedIn profile.
+
+A core team member to achieve long-term knowledge in TietoEvry Integration platform (TEIS) architecture, functionality and use.
+
+A person that has experience in projects that involves server, client and web services in an integration environment.
+
+4 to 6 years of working experience as a Java developer.  Excellent analytical and programming skills, display an ability to deal with complexity.
+
+We expect you to have:
+
+ Over 4 to 6 years of in-depth Java EE development experience with hands-on proficiency in Java 11, JPA, Hibernate,RDBMS and Webservices.
+ Design, develop, and manage APIs using JAX-RS / Spring Boot
+ Object Oriented analysis and design using common design patterns
+ Experience in designing and developing enterprise applications using Java EE platforms
+ Demonstrated utilization of Git, Maven, and adaptness in fundamental Linux commands.
+ Desirable hands-on experience with Messaging Technologies such as JMS or any analogous Messaging Queue.
+ Strong problem-solving and analytical skills.
+ Ability to work independently, Self-Driven and ambitious.
+ Experience on product development.
+ Good communication skills and a team player
+
+
+
+
+Barclays 
+ In-depth knowledge and extensive experience of Core Java and J2EE design and development work on large-scale banking applications.
+ Strong webservice development experience using REST
+ Strong understanding of OO Designing and Programming Techniques and associated concepts, Data Modelling, Design Patterns
+ In-depth knowledge and extensive experience of Spring, Javascript, JDBC and SQL (preferably Oracle)
+ Expertise in UI development with a focus on Angular/React JS.
+ Knowledge of modern frontend technologies, including JavaScript (ES6+), HTML5, and CSS3.
+ Good working knowledge and hands-on experience of JBoss and Hibernate
+ Good logical reasoning, problem solving and performance tuning Skills.
+ Good communication skills
+ Knowledge of Linux or other UNIX-based systems
+ Good working knowledge and hands-on experience of workflow application and business rules engine.
+ Exposure to and familiarity of AWS (Amazon Web Services)
+ Cybersecurity and cryptography knowledge
+ Proficient in CI/CD pipelines and related tools.
+ Oracle/ NoSQL Database experience
+
+
+
+
+
+
+
+Globant
+
+Skill Combo - 1 (Pune or Hyderabad)
+
+Java 8/11 
+Spring Boot 
+Microservices 
+Angular / React 
+
+
+Skill Combo - 2 (Pune, Hyderabad, Indore & Ahmedabad location)
+
+Java 8/11 
+Spring Boot and Microservices architectural patterns 
+Kafka , Event Driven development 
+Docker (6-8 months) is mandatory along with Kubernetes and NoSQL database 
+Kubernetes, Docker 
+
+
+
+
+
+
+MBC Software 
+Primary Roles And Responsibilities
+
+A candidate should have good knowledge on Java, REST, Spring boot, Micro service, Junit, knowledge of Grafana analytical and visualization tool is added advantage. 
+A candidate should have an understanding of cloud technology. 
+A team member who is passionate about quality and demonstrate creativity and innovation in enhancing the product, with excellent problem solving, debugging, analytical and communication skills. 
+Ability to quickly learn new languages and technologies as required for a successful project delivery 
+Operate in an agile scrum style with a mindset toward creating workable interim deliverables that can be demonstrated to clients and product managers 
+A candidate should have an understanding of Docker container technology. 
+
+To ensure you’re set up for success, you will bring the following skillset & experience: 
+
+ Proven track record of technical leadership in leading a team to deliver on time and on quality
+ Over all 8+ years of enterprise software product development experience
+ 7+ years of Java development experience
+ Knowledge of Reporting technologies, Go-lang
+ Core & Advanced Java (Threading, Design Patterns, Data Structures) J2EE, REST web services, Sprint framework
+ Understanding of data structures, data modeling and software architecture
+ Experience with GIT repository and JIRA tools
+ Experience with test driven software development
+
+
+
+
+
+
+
+
+
+
+ 

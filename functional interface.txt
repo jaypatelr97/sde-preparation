@@ -1,0 +1,91 @@
+what is functional interface - 
+it has only one abstract method
+can have any number of default and static methods
+
+
+Predicate --> boolean test(T t)
+Consumer --> vpid accept(T t)
+Function --> 
+Supplier --> T get() 
+
+ex -
+
+@FunctionalInterface // this annotation makes sure that only one abstract method is present in the interface
+public interface TestFunctional{
+
+// should have only one abstract method 
+public void abstract sum();
+
+// can have any number of static and default methods 
+// default method
+default void print1(){
+	SOP("Inside print1");
+}
+
+// static method
+staic void print2(){
+	SOP("Inside print2");
+}
+
+}
+
+Example of functional interface in java -
+1. Runnable   --> has run method
+2. Callable   --> has call method
+3. ActionLister 
+4. Comparable --> has compareTo
+
+
+we need to sort the procuct using product description
+
+class Product{
+private int id;
+private String prodName;
+private String prodDesc;
+private int price;
+
+// getters and setters 
+// toString 
+}
+
+// approach 1
+class ProductApplication{
+	main(){
+	// aasume you have list of prodcts here
+	Collections.sort(listOfProducts,new ProductDescriptionService())
+	
+	}
+
+}
+
+class ProductDescriptionService implements Comparator<String>{
+
+@Override
+public int compare(String s1, String s2){
+	return s1.compareTo(s2);
+}
+}
+
+// approach 2
+// we willuse anomymous way of passing comparator 
+class ProductApplication{
+	main(){
+	// aasume you have list of prodcts here
+	Collections.sort(listOfProducts,new ProductDescriptionService({
+	
+public int compare(String s1, String s2){
+return s1.compareTo(s2);
+}
+
+}
+))
+	
+	}
+
+}
+
+// approach 3 instead of anomyous way we'll use lambda expression
+
+
+
+

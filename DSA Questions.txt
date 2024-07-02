@@ -1,0 +1,16 @@
+Buy and sell stocks ?
+find the kth largest element in the array ?
+detect if the LL has a loop ?  
+valid parenthesis problems ?
+insertion sort ?
+merge sort ?
+selection sort ?
+quick sort ?
+form binary tree from the linked list ?
+Fibonacci series ?
+n steps problems (DP) ?
+time complexities of hashmaps insert, remove, etc etc
+Linked list of strings forms a palindrome  --> form stringbuffer object by traversing linkedlist nd then revrese the stringbuffer and check with the string object
+given 2 arrays find the elements that intersect both the arrays --> sort array and then use 2 pointer 
+
+

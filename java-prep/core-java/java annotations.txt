@@ -1,0 +1,49 @@
+In this module, you will learn about How to create custom annotations. And how to apply annotations. In the mobile showroom, the team of developers wants to keep track of the developers modifying functionality. This record needs to stay at the source level. You can create a custom annotation that maintains the list of people who have modified a particular class or one of its methods. A custom annotation can be declared as follows. You should attach @ just before the interface keyword to define annotation. Annotation methods should not have parameters and no throws clauses. Java Annotation methods can have default values. The method should return one of the following: primitive data types, String, Class, enum, or array of these data types. You have created the custom annotation @ChangeDetail with the annotation methods author Name, methodName, and Id with the default value. The @interface keyword signals to the Java compiler that this is a Java annotation definition. Steps in creating custom annotation. As already seen, you have an @ChangeDetail with the methods. Now you can use this annotation in code where ever needed. You have an abstract class Phone with a mobile name as variable, and getter and setter methods. And an abstract method price. Nokia class extends the Phone class and you are setting the values for the @ChangeDetail. The next step is to add meta-annotations to specify the scope and the target of our custom annotation available in the java.lang.annotation package. @Retention, @Target, @Inherited, @Documented are some applying annotation types. @Retentionn, which defines how long to retain an annotation. That is it sets the visibility of the annotation to which it is applied. And can have the following possible values: RetentionPolicy which is the availability SOURCE – The marked annotation is retained only at the source level and is ignored by the compiler. CLASS – The marked annotation is retained by the compiler at compile-time, but is ignored by the Java Virtual Machine (JVM). RUNTIME – The marked annotation is retained by the JVM so it can be used by the runtime environment. If no @Retention is present on an annotation type declaration, the retention policy defaults to RetentionPolicy.CLASS. @Target, defines where the annotation can be placed. A @Target specifies one of the following element types as its value: ANNOTATION TYPE can be applied to an annotation type. TYPE can be applied to any element of a class. PARAMETER. CONSTRUCTOR. FIELD. LOCALVARIABLE. METHOD. PACKAGE. If a Target meta-annotation is not present on an annotation type declaration, the declared type may be used on any program element. Now let us apply the meta-annotations in our @ChangeDetail. Retention is visible at runtime and target type which is applied to any element of a class. With the current implementation of @ChangeDetail, you can use it only once in a class. What you need is to maintain the list of people who have modified the class. For this purpose, Java provides @Repeatable meta-annotation since Java 8. @Repeatable enables the annotation to be repeated at a place any number of times. As a first step declare a repeatable annotation type. Then Declare the Containing Annotation Type, which must have a value element with an array type. The component type of the array type must be the repeatable annotation type. Here you have declared ChangeDetails as containing annotation type. So if multiple authors are involved, @ChangeDetails can be repeated for each one of them. Then in the Nokia class assign values to the @ChangeDetail. The @Inherited signals that a custom annotation used in a class should be inherited by all of its subclasses. For example, here the class Phone is using annotation @ChangeDetail which is marked with @Inherited. It means the sub-class Nokia inherits the @ChangeDetail. @Documented indicates that elements using this annotation should be documented by JavaDoc. While generating the Javadoc for class, the annotation @ChangeDetail would be included in that. You have explored about creating custom annotation and applying annotations. Let us see them in action in the demo.
+
+Predefined annotation types 
+
+These annotations are available in java.lang.Annotations
+
+Common Annotations 
+@SupressWarnings("value")
+@Deprecated
+@Overrride
+
+Applying Annotations
+@Retention
+@Target
+@Inherited
+@Documented
+
+
+@Override annotation is a marker annotation used on method level which informs the compiler that the sub class method is overriding the parent class method.
+
+@Deprecated - consider you have a newer functionality (optimal solution) created for a older implementation. So you want to specify the older method as deprecated. you cannot delete that method because it is used in the production by other services. used at class, method and variable level.
+
+@SupressWarnings({"unused","rawtypes"}) - to supress warnings displayed by the compiler. it is mandatory to provide the warning attribute in the annotation or else it will give compile time error
+
+
+@SafeVarags - from java 7, it is used to supress the unsafe operations warnings at the compile time
+can be used in final and static methods, constructors, private methods (from java 9).
+can be applied for non overridden methods
+
+@FunctionalInterface
+
+-------------------------------------
+creating custom annotation -
+
+You can create a custom annotation that maintains the list of people who have modified a particular class or one of its methods. A custom annotation can be declared as follows. You should attach @ just before the interface keyword to define annotation. Annotation methods should not have parameters and no throws clauses. Java Annotation methods can have default values. The method should return one of the following: primitive data types, String, Class, enum, or array of these data types. You have created the custom annotation @ChangeDetail with the annotation methods author Name, methodName, and Id with the default value. The @interface keyword signals to the Java compiler that this is a Java annotation definition. Steps in creating custom annotation. As already seen, you have an @ChangeDetail with the methods. Now you can use this annotation in code where ever needed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

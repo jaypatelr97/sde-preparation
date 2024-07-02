@@ -72,6 +72,53 @@
 64. Implemetation classes of ApplicationContext ?
 65. What are the modules of spring core container ?
 66. What are modules of web layer?
+67. intermediate vs terminal operator
+68. concurrenthashmap  --> https://www.developer.com/java/concurrenthashmap-java/,  https://www.digitalocean.com/community/tutorials/concurrenthashmap-in-java
+69. concurrenthashmap vs synchronozedhashmap ?
+70. design patterns
+71. 2 phase commit 
+72. microservices concepts 
+73. ExecutorService
+74. yield(), join() methods
+75. failfast
+76. failsafe
+77. linkedhashmap
+78. what are immutable classes? how to create it ?
+79. spring security, JWT implementation
+80. checked vs unchecked exception? list them
+81. lambdas, functional interface, bi functions
+82. diffeenr ways to create object
+83. what is splitIterator   --> https://www.digitalocean.com/community/tutorials/java-spliterator
+84. what is parallelStream
+85. Function --> FunctionalInterface . this interface has apply method
+86. method reference in java 8?
+87. convert string to upper case in java 8 using stream
+88. Fork/Join Framework ?
+89. default method in java 8
+90. example of flatmap
+91. in java you can broden the scope of the access modifier in the subclass but you cannot restrict the scope in subclass. that means - protected to public is valid but protected to private is not valid.
+92. what are blockingQueue?
+93. what are splitIterator?
+94. What are parallelStreams?
+95.  StringJoiner?
+https://medium.com/swlh/java-collectors-and-its-20-methods-2fc422920f18
+96. which wrapper classes dont take parameter as String?
+97. difference between iterator and listIterator?
+98. @RequestParam, @Param ?
+99. what is @PathVaraiable ?
+100. whaat is dockerfile?
+101. AWS knowledge ?
+102. find the second largest element from the list using stream?\
+103. Comparator.comparing ?
+104. sort objects using multiple fields? like sort employee first by empd and then by empName in descending order using java 8.
+105. Find the second largest element in the array ? 
+106. Given an Employee entity, find the list of employess have department as sales and having salary > 50000 and joining date before 1st Jan, 2019 and sort them in the descending order of joining date. (Interview question from EPAM)
+107. can a class be final and abstract at the same time ? NO
+108. Comparators class in java 8?
+101. Collections class in java 8 ?
+102. Collectors 
+103. What is the class name of the anonymous class created by jvm?
+
 
 
 

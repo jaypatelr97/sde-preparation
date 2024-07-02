@@ -1,0 +1,177 @@
+Method references are a feature introduced in Java 8 that allow you to refer to methods or constructors without invoking them. They provide a way to write more concise and readable code, especially when used in combination with functional interfaces like those in the `java.util.function` package.
+
+### Types of Method References
+
+There are four main types of method references in Java 8:
+
+1. **Reference to a Static Method**
+2. **Reference to an Instance Method of a Particular Object**
+3. **Reference to an Instance Method of an Arbitrary Object of a Particular Type**
+4. **Reference to a Constructor**
+
+### 1. Reference to a Static Method
+
+Syntax: `ClassName::methodName`
+
+**Example:**
+
+```java
+import java.util.function.BiFunction;
+
+public class Main {
+    public static void main(String[] args) {
+        BiFunction<Integer, Integer, Integer> adder = Main::add;
+        System.out.println("Sum: " + adder.apply(10, 20));
+    }
+
+    public static Integer add(Integer a, Integer b) {
+        return a + b;
+    }
+}
+```
+
+### 2. Reference to an Instance Method of a Particular Object
+
+Syntax: `instance::methodName`
+
+**Example:**
+
+```java
+import java.util.function.Supplier;
+
+public class Main {
+    public static void main(String[] args) {
+        Main main = new Main();
+        Supplier<String> stringSupplier = main::getString;
+        System.out.println("String: " + stringSupplier.get());
+    }
+
+    public String getString() {
+        return "Hello, World!";
+    }
+}
+```
+
+### 3. Reference to an Instance Method of an Arbitrary Object of a Particular Type
+
+Syntax: `ClassName::methodName`
+
+**Example:**
+
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList("apple", "banana", "cherry");
+        list.forEach(String::toUpperCase);
+    }
+}
+```
+
+In this case, `String::toUpperCase` refers to the `toUpperCase` method of the `String` class, and it will be applied to each element in the list.
+
+### 4. Reference to a Constructor
+
+Syntax: `ClassName::new`
+
+**Example:**
+
+```java
+import java.util.function.Supplier;
+
+public class Main {
+    public static void main(String[] args) {
+        Supplier<Main> mainSupplier = Main::new;
+        Main main = mainSupplier.get();
+        System.out.println("Main instance created: " + main);
+    }
+}
+```
+
+### More Detailed Examples
+
+#### Reference to a Static Method
+
+**Example:**
+
+```java
+import java.util.function.Function;
+
+public class Main {
+    public static void main(String[] args) {
+        Function<String, Integer> parseInt = Integer::parseInt;
+        Integer number = parseInt.apply("123");
+        System.out.println("Parsed number: " + number);
+    }
+}
+```
+
+#### Reference to an Instance Method of a Particular Object
+
+**Example:**
+
+```java
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "hello";
+        Predicate<String> equalsPredicate = str::equals;
+        boolean result = equalsPredicate.test("hello");
+        System.out.println("Is equal: " + result);
+    }
+}
+```
+
+#### Reference to an Instance Method of an Arbitrary Object of a Particular Type
+
+**Example:**
+
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.ToIntFunction;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> list = Arrays.asList("alpha", "beta", "gamma");
+        ToIntFunction<String> lengthFunction = String::length;
+        list.forEach(s -> System.out.println("Length of " + s + ": " + lengthFunction.applyAsInt(s)));
+    }
+}
+```
+
+#### Reference to a Constructor
+
+**Example:**
+
+```java
+import java.util.function.Function;
+
+class Person {
+    private String name;
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Function<String, Person> personCreator = Person::new;
+        Person person = personCreator.apply("John");
+        System.out.println("Created person: " + person);
+    }
+}
+```
+
+### Conclusion
+
+Method references in Java 8 provide a shorthand notation for lambda expressions that simply call a method. They improve code readability and make it more concise. They are particularly powerful when working with streams and functional interfaces, enabling a functional programming style in Java.

@@ -1,0 +1,136 @@
+List<List<String>> list = new ArrayList<>();
+list.stream().flatMap(
+
+
+1 -> 2 -> 3 -> 4 -> 5 -> 3
+
+
+1 -> 1
+2 -> 1
+3 -> 1 
+4 - > 1
+
+
+slo
+
+Find the Kth Largest Element in an Array:
+Write a function to find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+Example: Given nums = [3,2,1,5,6,4] and k = 2, return 5.
+                       1 2 3 4 5 6 
+
+class Sort{
+ int[] nums = [3,2,1,5,6,4];
+int k = 2;
+
+for(int i = 0; i< nums.length;i++){
+for(int j= i+1; j < nums.length; j++){
+
+ if(nums[j] < nums[i]){
+// swap
+int temp = nums[i];
+nums[i] = nums[j];
+nums[i] = temp;
+}
+}
+}
+
+// sorting in ascending order 
+// second largest 
+return nums[nums.length - k];
+}
+
+
+
+6 5 4 3 2 1
+
+increasing 
+
+decreadsing 
+
+
+
+
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+Example: Given s = "()" or s = "()[]{}", return true. Given s = "(]", return false
+
+[()] == true
+
+class Test{                 [
+
+public static void main(String[] args){
+
+Stack<Character> stack = new Stack<>();
+
+for(int i = 0; i< s.length; i++){
+
+char c = s.charAt(i);
+
+if(stack.isEmpty() || c == '(' || c == '{' || c == '['){
+stack.push(c);
+} else {
+char top = stack.peek();
+
+if(top == '(' && c == ')'){
+stack.pop();
+} else if(top == '{' && c == '}'){
+stack.pop();
+} else if(top == '[' && c == ']'){
+stack.pop();
+}
+}
+}
+if(!stack.isEmpty()){
+return false;
+} else {
+return true;
+}
+
+}
+
+}
+
+
+
+
+
+
+sorting algorithms - insertion, quick sort, merge sort, 
+flapMap 
+
+problem solving
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
+
+
